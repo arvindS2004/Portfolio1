@@ -1,0 +1,162 @@
+.navbar {
+  background-color: rgba(0, 0, 0, 0.607);
+  color: white;
+  padding: 15px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+} 
+
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 80px;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo img {
+  width: 10vh;
+  margin-right: 10px;
+  border-radius: 20%;
+}
+
+.navbar-logo span {
+  font-size: 40px;
+  font-family: monospace;
+  font-weight: 600;
+  color: white;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 30px;
+}
+
+.navbar-links a {
+  color: white; 
+  text-decoration: none;
+  font-size: 20px;
+  transition: color 0.3s ease;
+}
+
+.navbar-links a:hover {
+  color: #ff007b;
+}
+
+.navbar-toggle {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+  width: 30px;
+  height: 24px;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.toggle-bar {
+  width: 100%;
+  height: 3px;
+  background-color: white;
+  position: absolute;
+  left: 0;
+  transition: all 0.3s ease;
+}
+
+.toggle-bar:nth-child(1) {
+  top: 0;
+}
+
+.toggle-bar:nth-child(2) {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.toggle-bar:nth-child(3) {
+  bottom: 0;
+}
+
+.navbar-toggle.open .toggle-bar:nth-child(1) {
+  transform: translateY(9px) rotate(52deg);
+}
+
+.navbar-toggle.open .toggle-bar:nth-child(2) {
+  opacity: 0;
+}
+
+.navbar-toggle.open .toggle-bar:nth-child(3) {
+  transform: translateY(-11px) rotate(-52deg);
+}
+
+
+[data-theme="dark"] .toggle-bar{
+  background-color: black;
+}
+
+@media (max-width: 768px) {
+  .navbar-links {
+      display: none; 
+      flex-direction: column;
+      position: absolute;
+      top: 70px;
+      right: 0;
+      background-color: rgba(0, 0, 0, 0.81);
+      width: 100%;
+      text-align: center;
+      padding: 20px 0;
+  }
+
+  .navbar-links.active {
+      display: flex; 
+  }
+
+  .navbar-toggle {
+      display: flex;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-container {
+      padding: 0 10px;
+      margin-bottom: 20px;
+  } 
+
+  .cross-icon {
+      font-size: 30px;
+  }
+
+  .navbar-links {
+      top: 60px;
+  }
+
+  [data-theme="dark"] .navbar-links{
+    background-color: rgba(255, 255, 255, 0.751);
+    backdrop-filter: blur(10px);
+  }
+
+  .navbar-logo img {
+      width: 50px;
+  }
+
+  .navbar-logo span {
+      font-size: 20px;
+  }
+
+  .navbar-toggle {
+      display: flex; 
+      margin-right: 2vh;
+  }
+
+  .navbar-links a {
+      padding: 10px 0;
+  }
+}

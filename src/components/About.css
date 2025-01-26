@@ -1,0 +1,163 @@
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: black;
+    color: #fff;
+    transition: 0.7s ease-in-out;
+}
+
+[data-theme="dark"] .about-container {
+    background-color: #f7f5f5;
+    color: #100f0f;
+}
+
+[data-theme="dark"] .about-content {
+    border-color: #555; 
+    box-shadow: 0 0 15px #333; 
+}
+
+[data-theme="dark"] .about-content .p1{
+   color: green;
+   font-weight: 700;
+}
+
+[data-theme="dark"] .about-buttons .btn-hire {
+    background-color: #55555500; 
+    color: white;
+}
+
+[data-theme="dark"] .dots {
+    text-shadow: 0 0 30px #0b0b0b; 
+}
+
+[data-theme="dark"] .btn-get-tour{
+    color: rgb(40, 7, 176);
+    font-weight: 600;
+}
+
+[data-theme="dark"] .about-image img {
+    border-color: #555;
+    box-shadow: 0 0 25px #333; 
+}
+ 
+.about-content {
+    border: 5px dotted white;
+    padding: 20px;
+    flex: 1;
+    max-width: 70%;
+    height: 70vh;
+    font-size: 20px;
+    box-shadow: 0 0 15px rgb(246, 247, 247);
+    border-radius: 10px;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+
+@keyframes appear {
+    from {        
+        opacity: 0;
+        scale: 0.5;
+    }
+    to {
+        opacity: 1;        
+        scale: 1;
+    } 
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0); 
+    }
+    50% {
+        transform: translateY(0px); 
+    }
+}
+
+.loca {
+    animation: float 3s ease-in-out infinite;
+}
+
+.about-content h1, .about-content h2, .about-content h3 {
+    margin: 10px 0;
+}
+ 
+.about-content p{
+    margin: 20px 0;
+    line-height: 1.6;
+    font-size: 20px;
+}
+
+.about-container .p1{
+    color: yellowgreen;
+}
+
+.about-buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.about-buttons .btn-hire, .about-buttons .btn-get-tour {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.btn-hire {
+    background-color: #ecebeb00;
+    color: white;
+    padding: 0;
+}
+
+.btn-hire img {
+    width: 2.4vh;
+    filter: drop-shadow(0 0 3px white);
+}
+
+.btn-get-tour {
+    background-color: transparent;
+    color: aquamarine;
+    border: none;
+    border-bottom: 1px solid #ff007b;
+    padding-bottom: 5px;
+    margin-top: 10px;
+}
+
+.dots {
+    text-shadow: 0 0 30px rgb(241, 243, 243);
+}
+
+.about-image img {
+    max-width: 100%;
+    border-radius: 50px;
+    border: 5px dotted white;
+    box-shadow: 0 0 25px rgb(255, 255, 255);
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+
+@media (max-width: 480px) {
+    .about-container {
+        flex-direction: column;
+        margin: -2vh;
+    }
+
+    .about-content{
+        border: none;
+    }
+
+    .about-content p{
+        font-size: 17px;
+    }
+
+    .about-image img {
+        width: 40vh;
+        margin-top: 10vh;
+        margin-bottom: 0;
+    }
+}
+ 

@@ -1,0 +1,84 @@
+/* Light Theme (default) */
+html{
+    scroll-behavior: smooth;
+}
+body {
+    background-color: rgb(8, 8, 8);
+    color: #000000;
+    transition: background-color 1s, color 0.3s;
+    margin-left: 1.5vh;
+  }
+  
+  .navbar {
+    background-color: rgba(0, 0, 0, 0.607);
+  }
+  
+  /* Dark Theme */
+  [data-theme="dark"] body {
+    background-color: whitesmoke;
+    color: #ffffff;
+  }
+  
+  [data-theme="dark"] .navbar {
+    background-color: rgba(16, 15, 15, 0);
+    color: black;
+  }
+
+  [data-theme="dark"] .navbar-links a{
+    background-color: rgba(16, 15, 15, 0);
+    color: black;
+  }  
+  [data-theme="dark"] .navbar-logo span{
+    background-color: rgba(16, 15, 15, 0);
+    color: black;
+  }
+
+  [data-theme="dark"] .navbar-links a:hover {
+    color: #ff007b;
+  }
+  
+  /* Apply dark theme to other components */
+  [data-theme="dark"] .app1 {
+    background-color: #181818;
+    color: #ffffff;
+  }
+  
+  [data-theme="dark"] .navbar{
+    color: #0c0b0b;
+  }
+  
+  [data-theme="dark"] .hero,
+  [data-theme="dark"] .about,
+  [data-theme="dark"] .services,
+  [data-theme="dark"] .projects,
+  [data-theme="dark"] .achin,
+  [data-theme="dark"] .contact {
+    background-color: #0b0b0b;
+    color: #ffffff;
+  }
+  
+  /* Additional component-specific styles */
+  [data-theme="dark"] .hero {
+    background-color: #ebe8e8;
+  }
+  
+  [data-theme="dark"] .about {
+    background-color: #282828;
+  }
+  
+  [data-theme="dark"] .services {
+    background-color: #282828;
+  }
+  
+  [data-theme="dark"] .projects {
+    background-color: #282828;
+  }
+  
+  [data-theme="dark"] .achin {
+    background-color: #090808;
+  }
+  
+  [data-theme="dark"] .contact {
+    background-color: #151414;
+  }
+  

@@ -1,0 +1,476 @@
+.heads{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 30px;
+  padding-top: 80px;
+  font-size: 20px;
+  color: white;
+}
+
+.body {
+    display: flex;
+    justify-content: space-around;    
+    align-items: center;
+    color: white;
+    transition: 0.7s ease-in-out;
+    background-color: black;
+  }
+
+  [data-theme="dark"] .body{
+    background-color: rgba(255, 255, 255, 0.984);
+    color: black;
+}
+
+[data-theme="dark"] .ach-container  .achievement-buttons{
+  color: black;
+  border-color: #ff006f;
+}
+
+[data-theme="dark"] .heads{
+  background-color: white;
+  border: none;
+  color: black;
+}
+
+[data-theme ="dark"] .heads h3{
+  color: black;
+}
+
+
+  
+  .interests-container {
+    margin: 10vh 20vh;
+    position: relative;
+    width: 400px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .interests{
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 30%;
+  }
+
+  @keyframes appear{
+    from{        
+        opacity: 0;
+        scale: 0.4;
+    }
+    to{
+        opacity: 1;        
+        scale: 1;
+    }
+}
+  
+  .interest-item {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: white;
+    font-size: 16px;
+    margin-top: 10vh;
+    font-weight: bold;
+    animation: collab linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 30%;
+  }
+  
+  .central {
+    width: 150px;
+    height: 150px;
+    top: 40%;
+    background-color: #ff006f;
+    font-size: 25px;
+    color: rgb(250, 247, 247);
+  }
+  
+  .top-left {
+    top: 0;
+    left: 0%;
+    width: 100px;
+    height: 100px;
+  }
+  
+  .top-right {
+    top: 0;
+    right: -0%;
+    width: 100px;
+    height: 100px;
+  }
+  
+  .bottom-left {
+    top: -30%;
+    left: 38%;
+    width: 100px;
+    height: 100px;
+  }
+  
+  .bottom-right {
+    right: -20%;
+    top: 60%;
+    transform: translateY(-50%);
+    width: 100px;
+    height: 100px;
+  }
+  .mobach{
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  .center-left {
+    left: -20%;
+    top: 60%;
+    transform: translateY(-50%);
+    width: 100px;
+    height: 100px;
+  }
+
+  .bottom-left img{
+    animation: float 3s ease-in-out infinite;
+   filter:drop-shadow( 0 0 25px cyan);
+  }
+
+  .top-left img{
+    animation: spin 3s ease-in-out infinite;
+    filter: drop-shadow(0 0 15px rgba(255, 238, 0, 0.919));
+  }
+
+  .top-right img{
+    animation: tofro 2.2s ease-in-out infinite;
+    filter: drop-shadow(0 0 25px rgb(52, 18, 201));
+  }
+
+  .center-left img, .bottom-right img{
+    animation:breath 3s ease-in-out infinite;
+  }
+  .center-left img{
+    filter: drop-shadow(0 0 25px rgb(52, 18, 201));
+  }
+
+  .bottom-right img{
+    filter: drop-shadow(0 0 10px rgb(255, 255, 255));
+  }
+
+  @keyframes gradient-animation_2 {
+    0%{
+      transform: translateX(-100%);
+    }
+  
+    100% {
+      transform: translateX(100%);
+    }
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0); 
+    }
+    50% {
+      transform: translateY(-17px); 
+    }
+  }
+
+  @keyframes breath {
+    40% {
+      opacity: 0;
+    }
+    80% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes tofro {
+    0%, 100% {
+      transform: translateX(0); 
+    }
+    50% {
+      transform: translateX(-10px); 
+    }
+  }
+
+  @keyframes spin {
+    0%,100% {
+      transform: rotate(-20deg);
+    }
+    50% {
+      transform: rotate(20deg);
+    }
+  }
+  
+  .circle-text {
+    margin: 10px;
+  }
+
+  .circle-text img{
+    width: 10vh;
+  }
+  
+  .label-text {
+    margin-top: 0px;
+    padding: 5px 10px;
+    background-color: #444;
+    color: white;
+    border-radius: 10px;
+    font-size: 20px;
+  }
+  
+  .interest-item p {
+    margin: 0;
+  }
+
+.ach-container{
+  animation: collab linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 30%;
+}
+
+@keyframes collab{
+  from{        
+      opacity: 0;
+      scale: 0.4;
+  }
+  to{
+      opacity: 1;        
+      scale: 1;
+  }
+}
+
+
+
+.ach-container  .achievement-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15vh;
+  margin-left: 50px;
+  margin-top: 10vh;
+  border-radius: 5px;
+  border: 4px solid cyan;
+}
+
+.ach-container{  
+  font-family: monospace;
+  .circle img{
+    width: 20vh;
+    top: 5%;
+    position: absolute;
+  }
+  
+  .achievement-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .down{
+    padding: 15px 25px;
+    border: unset;
+    border-radius: 15px;
+    color: #e8e8e8;
+    z-index: 1;
+    background: #212121;
+    position: relative;
+    font-weight: 600;
+    margin-top: 15px;
+    font-size: 15px;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    transition: all 250ms;
+    overflow: hidden;
+  }
+
+  .down::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    border-radius: 15px;
+    background-color: #e8e8e8;
+    z-index: -1;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(255, 255, 255, 0.27);
+    box-shadow: 4px 8px 19px -3px rgba(255, 255, 255, 0.27);
+    transition: all 0.5s
+  }
+
+  .down:hover::before {
+    width: 100%;
+    color: black;
+  }
+
+  .down:hover{
+    background-color: black;
+    color: black;
+  }
+  
+  .btno {
+    margin: 20px -10px;
+    background: linear-gradient(135deg, #848284,#282327);
+    color: rgb(249, 250, 249);
+    border: none;
+    padding: 20px 10px; 
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    width: 50vh;
+    transition: all 1s;
+    font-family: monospace;
+    animation: collab linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 30%;
+  }
+
+  .btnc{
+    background: linear-gradient(135deg, #848284,#282327);
+    color: rgb(249, 250, 249);
+    border: none;
+    padding: 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    width: 47vh; 
+    transition: all 1s;
+    font-family: monospace;
+    animation: collab linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 30%;
+  }
+  
+  .btno:hover {
+    transition: 0.4s ease-in-out;
+    background: linear-gradient(135deg, #d00b60f8, #ff006f);
+    box-shadow: 0 0 20px rgb(14, 243, 243);
+  }  
+}
+
+.mobin{
+  opacity: 0;
+}
+
+/* Achevements */
+
+@media screen and (max-width: 780px) {
+
+  .achin{
+    margin-bottom: 50vh;
+  }
+
+  .heads{
+    font-size: 20px;
+    height: 4vh;    
+  }
+  
+  .ach-container{
+    margin-left: -5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 120%;
+  }
+  .body{
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+    margin-left: -2px;
+    margin-right: -2px;
+    background-color: rgba(0, 0, 0, 0.955);
+    margin-bottom: 0px;
+  }
+   .ach-container .achievement-buttons{
+    padding: 5px 0;
+    width: 70%;
+   }
+  .achievement-buttons .btno{
+    width: 70%;
+   }
+
+   .achievement-buttons .btnc{
+    width: 90%;
+   }
+
+  .ach-container .circle img{
+    width: 12vh;
+    left: 10%;
+   }
+
+   .mobin{
+    opacity: 1;
+    margin-top: 15vh;
+    margin-bottom: -1vh;
+   }
+
+.webin{
+  opacity: 0;
+}
+
+.wenach{
+  opacity: 0;
+}
+.mobach{
+  opacity: 1;
+  width: 50%;
+}
+
+
+
+    .interests-container {
+      width: 90%;
+      height: auto;    
+      margin-top: 20vh;
+    }
+    .interests{
+      display: flex;
+      flex-direction: row-reverse;
+    }
+    .interest-item{
+      margin: 0vh;
+    }
+
+    .interest-item img{
+      width: 7vh;
+    }
+    .interest-item p{
+      font-size: 13px;
+    }
+
+    .bottom-left{
+      margin: -15vh -5vh;
+    }
+
+    .top-left{
+      margin: -12vh 8vh;
+    }
+
+    .top-right{
+      margin: -12vh 4vh;
+    }
+    .top-right img{
+      width: 6vh;
+    }
+
+    .center-left{
+      margin: 7vh 13vh;
+    }
+    .center-left img{
+      width: 10vh;
+    }
+
+    .bottom-right{
+      margin: 7vh 10vh;
+    }
+   
+    .central {
+      width: 120px;
+      height: 120px; 
+      font-size: 18px;
+      margin-left: 20px;
+    }
+  }
+  
